@@ -1,0 +1,45 @@
+.animeTitle
+{
+    color: #fff;
+    width: 100%;
+    font-size: 2vw;
+    font-weight: 500;
+}
+.animeImage{
+    margin: 0 20px 0 0;
+}
+.animeSynopsis{
+    height: 200px;
+    color: #fff;
+    flex: 1;
+    align-self: flex-start;
+    margin: 0;
+}
+
+input[type=submit]{
+    flex-direction: row;
+    width: 70px;
+    border-radius: 4px;
+    background-color: rgba(93, 93, 93, 1);
+    color: #fff;
+    border-style: none;
+    font-family: 'Roboto',sans-serif;
+    margin: 0 0 0 5px;
+    text-shadow:1px 2px 1px #000;
+}
+
+input[type=submit]:hover{
+    background-color: rgba(93, 93, 93, .8);
+}
+
+input[type=text]{
+    width: 200px;
+    border-radius: 4px;
+    font-family: 'Roboto',sans-serif;
+}
+
+h1{
+    color:#fff;
+    width: 100%;
+    font-weight: 500;
+}

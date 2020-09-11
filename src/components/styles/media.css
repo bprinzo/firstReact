@@ -1,0 +1,19 @@
+@media only screen and (max-width: 1310px) {
+    
+   .wrapper .nav{
+        justify-content: flex-start;
+    }
+    .menu li{
+        display: none;
+    }
+    .nav .img{
+        display: none;
+    }
+    .nav .img2{
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+}

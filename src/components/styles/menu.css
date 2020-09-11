@@ -1,0 +1,24 @@
+.menu {
+    display: flex;
+    list-style: none;
+    color: #fff;
+    letter-spacing: 0.04em;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 500;
+}
+.menu li a{
+    padding: 15px;
+    text-align: center;
+    padding: 28px 20px;
+    float: right;
+}
+#price{
+    background-color: #01807e;
+}
+#log {
+    background-color: #5d5d5d;
+}
+.menu li a:hover {
+    color: #4ecda7;
+}
