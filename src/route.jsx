@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { isAuthenticated } from './components/auth'
 
 import Nav from './components/nav';
@@ -37,17 +37,17 @@ const LoggedRoute = ({ component: Component, ...rest }) => (
     />
 )
 const Routes = () => (
-    <Router>
+    <HashRouter>
         <Wrapper>
             <Nav />
         </Wrapper>
         <Switch>
             <PrivateRoute path="/logged" component={Logged}/> 
-            <LoggedRoute path="/login" exact component={LogIn} />
+            <LoggedRoute path="/login" component={LogIn} />
             <Route path="/" exact component={Home} />
             <PrivateRoute path="/body" component={Body} />
             <Route path="/register" component={Register} />
         </Switch>
-    </Router>
+    </HashRouter>
 )
 export default Routes;

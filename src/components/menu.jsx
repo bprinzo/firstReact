@@ -1,6 +1,6 @@
 import React from 'react'
-
-
+import {Link} from 'react-router-dom'
+ 
 export default props =>
     <ul className="menu">
         <li><a>SCANNERS</a></li>
@@ -10,5 +10,7 @@ export default props =>
         <li><a>ABOUT</a></li>
         <li><a>EMAIL</a></li>
         <li><a id="price">PRICING</a></li>
-        <li><a href = "/login" id='log'>LOG IN</a></li>
+        <Link to="/login">
+        <li><a id='log'>LOG IN</a></li>
+        </Link>
     </ul>
