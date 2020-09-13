@@ -1,0 +1,29 @@
+.logOut button{
+    flex-direction: row;
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: rgba(93, 93, 93, 1);
+    color: #fff;
+    border-style: none;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: .2em;
+    margin: 15px;
+}
+
+.logOut button:hover{
+    background-color: rgba(93, 93, 93, .8);
+}
+
+.logOut h1{
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+}
+.logOut{
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+.register .accountCreate{
+    color: #fff;
+}
+.register a:link{
+    text-decoration: none;
+    color:#4ecda7 ;
+}
+.register a:visited{
+    text-decoration: none;
+    color:#4ecda7 ;
+}

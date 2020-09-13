@@ -1,0 +1,30 @@
+.register{
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+}
+.register input{
+    padding: 8px 0 8px 0;
+    margin: 8px 0 8px 0;
+    width: 300px;
+    border-radius: 5px;
+    padding-inline-start: 10px;
+}
+.register input[type=submit]{
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    width: 310px;
+    padding-inline-start: 0;
+}
+.register h1{
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+}
+
+.register p{
+    color: rgb(173, 36, 36);
+    font-size: 12px;
+}
