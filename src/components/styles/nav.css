@@ -3,9 +3,7 @@
     display: flex;
     height: 70px;
     justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    max-width: 1300px;
+    align-content: center;
 }
 
 .img{
@@ -17,4 +15,12 @@
 
 .img2{
     display: none;
+}
+.menu a:link{
+    text-decoration: none;
+    color: #fff;
+}
+.menu a:visited{
+    text-decoration: none;
+    color: #fff;
 }

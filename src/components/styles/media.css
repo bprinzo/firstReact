@@ -1,7 +1,12 @@
 @media only screen and (max-width: 1310px) {
     
-   .wrapper .nav{
-        justify-content: flex-start;
+    body .body{
+        padding: 0;
+        flex-flow: column wrap;
+    }
+    #root .wrapper{
+        justify-content: space-between;
+        padding: 0;
     }
     .menu li{
         display: none;
@@ -10,10 +15,58 @@
         display: none;
     }
     .nav .img2{
-        display: block;
-        position: relative;
+        display: flex;
         margin: 0;
         padding: 0;
     }
+    .body h1{
+        padding: 0 0 0 50px;
+    }
+    .body form{
+        padding: 0 0 0 50px;
+    }
+    body .animeImage{
+        padding: 0 0 15px 50px;
+        flex-basis: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        width: 220px;
+    }
+    body .animeTitle{
+        font-size: 4vh;
+        padding: 0 0 0 50px ;
 
+    }
+    body .animeSynopsis{
+        flex: 0;
+        font-family: 'Roboto',sans-serif;
+        letter-spacing: .05em;
+        padding: 0 0 0 50px;
+    }
+
+    .nav .mediaLogIn{
+        display: flex;
+        text-align: center;
+        margin: 12px 0 0 150px;
+        font-size: 1em;
+        letter-spacing: .05em;
+        border-style: solid;
+        padding: 10px;
+        border-width: 1.5px;
+        border-radius: 5px;
+    }
+    .nav .mediaLogIn{
+        text-decoration: none;
+        color: #fff;
+    }
+    .nav .mediaLogIn:hover{
+        color: #222;
+        background-color: #fff;
+    }
+  
+    
+
+}
+.mediaLogIn{
+    display: none;
 }

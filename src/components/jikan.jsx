@@ -12,6 +12,8 @@ export default props => {
         ev.preventDefault();
         setRepo({ image: '', title: type, synopsis: '' })
     }
+    
+
 
 
 
@@ -34,6 +36,7 @@ export default props => {
                     })
             })();
     }, [repo.title]);
+
 
     if (!repo.title)
         return (
