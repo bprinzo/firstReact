@@ -37,7 +37,7 @@ export default () => {
             {errors.email && errors.email.type === "required" && <p>This field is required</p>}
             {errors.email && errors.email.type === "minLength" && <p>This field is required min length of 3</p>}
             {errors.email && errors.email.type === "maxLength" && <p>This field is required max length of 50</p>}
-            {errors.email && errors.email.type === "pattern" && <p>Invalid email adress</p>}
+            {errors.email && errors.email.type === "pattern" && <p>Invalid email address</p>}
 
             <input name='username' placeholder = 'Username' ref={register({ required: true, minLength: 3, maxLength: 20 })} />
             {errors.username && errors.username.type === "required" && <p>This field is required</p>}
