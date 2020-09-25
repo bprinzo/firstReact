@@ -1,44 +1,60 @@
-.animeTitle
-{
-    color: #fff;
-    width: 100%;
-    font-size: 2vw;
-    font-weight: 500;
+.animeTitle {
+  color: #fff;
+  width: 100%;
+  font-size: 2vw;
+  font-weight: 500;
 }
-.animeImage{
-    margin: 0 20px 0 0;
+.animeImage {
+  margin: 0 20px 0 0;
 }
-.animeSynopsis{
-    height: 200px;
-    color: #fff;
-    flex: 1;
-    align-self: flex-start;
-    margin: 0;
-}
-
-input[type=submit]{
-    flex-direction: row;
-    width: 70px;
-    border-radius: 4px;
-    background-color: rgba(93, 93, 93, 1);
-    color: #fff;
-    border-style: none;
-    font-family: 'Roboto',sans-serif;
-    margin: 0 0 0 5px;
+.animeSynopsis {
+  height: 200px;
+  color: #fff;
+  flex: 1;
+  align-self: flex-start;
+  margin: 0;
 }
 
-input[type=submit]:hover{
-    background-color: rgba(93, 93, 93, .8);
+input[type="submit"] {
+  flex-direction: row;
+  width: 70px;
+  border-radius: 4px;
+  background-color: rgba(93, 93, 93, 1);
+  color: #fff;
+  border-style: none;
+  font-family: "Roboto", sans-serif;
+  margin: 0 0 0 5px;
 }
 
-input[type=text]{
-    width: 200px;
-    border-radius: 4px;
-    font-family: 'Roboto',sans-serif;
+input[type="submit"]:hover {
+  background-color: rgba(93, 93, 93, 0.8);
 }
 
-h1{
-    color:#fff;
-    width: 100%;
-    font-weight: 500;
+input[type="text"] {
+  width: 200px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: #fff;
+  width: 100%;
+  font-weight: 500;
+}
+
+h1 {
+  color: #fff;
+}
+h1 a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+h1 a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+.nothingFound {
+  color: rgb(173, 36, 36);
+  width: 100%;
+  font-size: 3vh;
 }
