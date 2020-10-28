@@ -7,14 +7,14 @@ export default (props) => {
   const [error, setError] = useState(false);
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, ev) => {
-    const email = data.email;
+    const username = data.username;
     const password = data.password;
     ev.target.reset();
     axios
-      .post("https://reqres.in/api/login", { email, password })
+      .post("http://localhost:3001/api/authenticate", { username, password })
       .then(function (response) {
-        console.log(response);
-        window.localStorage.setItem("token", response.data.token);
+        const token = `Bearer ${response.data.token}`;
+        window.sessionStorage.setItem("token", token);
         window.location.reload();
       })
       .catch(function (error) {
@@ -28,25 +28,24 @@ export default (props) => {
       <h1>Log In</h1>
       {error ? <p>Incorrect username or password</p> : null}
       <input
-        name="email"
-        placeholder="Email"
+        name="username"
+        placeholder="Username"
         ref={register({
           required: true,
           minLength: 3,
           maxLength: 50,
-          pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
         })}
       />
-      {errors.email && errors.email.type === "required" && (
+      {errors.username && errors.username.type === "required" && (
         <p>This field is required</p>
       )}
-      {errors.email && errors.email.type === "minLength" && (
+      {errors.username && errors.username.type === "minLength" && (
         <p>This field is required min length of 3</p>
       )}
-      {errors.email && errors.email.type === "maxLength" && (
+      {errors.username && errors.username.type === "maxLength" && (
         <p>This field is required max length of 50</p>
       )}
-      {errors.email && errors.email.type === "pattern" && (
+      {errors.username && errors.username.type === "pattern" && (
         <p>Invalid email address</p>
       )}
 

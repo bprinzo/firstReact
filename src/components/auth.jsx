@@ -1,1 +1,1 @@
-export const isAuthenticated = () => window.localStorage.getItem('token') ? true : false
+export const isAuthenticated = () => window.sessionStorage.getItem('token') ? true : false

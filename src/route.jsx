@@ -10,6 +10,8 @@ import Home from "./components/home";
 import LogIn from "./components/logIn";
 import Logged from "./components/logged";
 import AnimeDetail from "./components/animeDetail";
+import Upload from "./components/uploads";
+import Posts from "./components/posts";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -50,8 +52,10 @@ const Routes = () => (
       <LoggedRoute path="/login" component={LogIn} />
       <Route path="/" exact component={Home} />
       <PrivateRoute path="/body" component={Body} />
-      <Route path="/register" component={Register} />
+      <LoggedRoute path="/register" component={Register} />
       <Route path="/anime/:id" component={AnimeDetail} />
+      <PrivateRoute path="/upload" component={Upload} />
+      <PrivateRoute path="/posts" exact component={Posts} />
     </Switch>
   </HashRouter>
 );

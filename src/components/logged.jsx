@@ -1,23 +1,25 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 export default () => {
+  const [logOut, setlogOut] = useState(false);
 
-    const [logOut, setlogOut] = useState(false);
+  const handleClick = () => (
+    setlogOut(!logOut),
+    logOut
+      ? false
+      : (window.sessionStorage.removeItem("token"), window.location.reload())
+  );
 
-
-    const handleClick = () => (
-        setlogOut(!logOut),
-        console.log(logOut),
-        (logOut ? false : (window.localStorage.removeItem('token'), window.location.reload()))
-    )
-
-    return (
-        <div className='logOut'>
-            <h1>You're Logged</h1>
-            <Link to='/body'>
-                <button>Search</button>
-            </Link>
-            <button onClick={handleClick}>Log Out</button>
-        </div>
-    );
-}
+  return (
+    <div className="logOut">
+      <h1>You're Logged</h1>
+      <Link to="/body">
+        <button>Anime Search</button>
+      </Link>
+      <Link to="/posts">
+        <button>Posts</button>
+      </Link>
+      <button onClick={handleClick}>Log Out</button>
+    </div>
+  );
+};

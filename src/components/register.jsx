@@ -9,12 +9,29 @@ export default () => {
     { success: false, fail: false },
   ]);
   const onSubmit = (data, ev) => {
-    console.log(data);
+    const {
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
+      administrator,
+    } = data;
     axios
-      .post("https://reqres.in/api/users", { data })
+      .post("http://localhost:3001/api/register", {
+        firstName,
+        lastName,
+        username,
+        email,
+        password,
+        administrator,
+      })
       .then(function (response) {
         console.log(response);
         setValidationRegister({ success: true, fail: false });
+        const token = `Bearer ${response.data.token}`;
+        window.sessionStorage.setItem("token", token);
+        window.location.reload();
       })
       .catch(function (error) {
         console.log(error);
@@ -117,6 +134,18 @@ export default () => {
         ref={register({ validate: (value) => value === getValues("password") })}
       />
       {errors.confirmpassword && <p>Password don't match</p>}
+
+      <div className="checkbox-div">
+        <label>Administrator: </label>
+        <input
+          type="checkbox"
+          name="administrator"
+          ref={register}
+          data-val="true"
+          and
+          value="true"
+        />
+      </div>
 
       <input type="submit" />
       {validationRegister.success ? (

@@ -11,7 +11,6 @@ export default (props) => {
     ev.preventDefault();
     setRepo(type);
   };
-
   useEffect(() => {
     if (repo)
       (async () => {
