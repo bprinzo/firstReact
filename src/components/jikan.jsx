@@ -33,7 +33,6 @@ export default (props) => {
         <input
           type="text"
           value={type}
-          required
           onChange={(ev) => setType(ev.target.value)}
         />
         <input type="submit" value="Search"></input>

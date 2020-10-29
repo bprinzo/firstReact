@@ -16,6 +16,9 @@ export default () => {
       <Link to="/body">
         <button>Anime Search</button>
       </Link>
+      <Link to="/upload">
+        <button>Create Posts</button>
+      </Link>
       <Link to="/posts">
         <button>Posts</button>
       </Link>
